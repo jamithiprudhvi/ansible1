@@ -1,8 +1,9 @@
 - name: nginc
   hosts: frontend
+  become: yes
   tasks:
     - name: install nginx
-      ansible.builtin.yum:
+      ansible.builtin.package:
         name: nginx
         state: present
     - name: start nginx server
