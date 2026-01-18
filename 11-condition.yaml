@@ -1,0 +1,16 @@
+- name: conditions
+  hosts: frontend
+  become: yes
+  vars_prompt:
+    NUMBER: 78
+
+  tasks:
+    - name: chech the number is grater than or equal to 78
+      ansible.builtin.debug:
+       msg: "the number {{ NUMBER }} is greater than equal to 78"
+      when: NUMBER >= 78
+
+    - name: check the number is less than 78
+      ansible.builtin.debug:
+       msg: "the number {{ NUMBER }} is less than 78"
+      when: NUMBER < 78  
