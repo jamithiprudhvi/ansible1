@@ -6,8 +6,5 @@
       ansible.builtin.debug:
         msg: "this is a multi playbook example"
 
-    - name: ping the frontend servers
-      hosts: localhost
-      tasks:
-      - name: ping the remote hosts
-        ansible.builtin.ping:     
+    - name: ping the remote hosts
+      ansible.builtin.ping:     
