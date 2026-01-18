@@ -1,0 +1,10 @@
+- name: vars playbook
+  hosts: frontend
+  become: yes
+  vars:
+   COURSE: DevSecOps
+   DURATION: 12 weeks
+  tasks:
+   - name: print the message
+     ansible.builtin.debug:
+      msg: "welcomr to {{COURSE}} course which is of {{DURATION}} duration   
