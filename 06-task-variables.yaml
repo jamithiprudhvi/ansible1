@@ -1,0 +1,17 @@
+- name: variable
+  hosts: frontend
+  become: yes
+  vars:
+    COURSE: "DevOps"
+    DURATION: "10 weeks"
+  tasks:
+    - name: print the message
+      vars:
+        COURSE: "Ansible"
+        DURATION: "1 weeks"
+      ansible.builtin.debug:
+        msg: "Welcome to {{ COURSE }} course which is of {{ DURATION }} duration"  
+
+    - name: print the global message
+      ansible.builtin.debug:
+       msg: "Welcome to {{ COURSE }} course which is of {{ DURATION }} duration"     
