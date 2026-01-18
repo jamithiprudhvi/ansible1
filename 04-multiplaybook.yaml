@@ -1,13 +1,13 @@
 - name: multi playbook
-  hosts: localhosts
-  connections: local
-  tasks: print
-   - name: print the msg
-     ansible.builtin.debug:
-       msg: "this is a multi playbook example"
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: print the msg
+      ansible.builtin.debug:
+        msg: "this is a multi playbook example"
 
-  - name: ping the frontend servers
-    hosts: localhost
-    tasks:
+    - name: ping the frontend servers
+      hosts: localhost
+      tasks:
       - name: ping the remote hosts
         ansible.builtin.ping:     
