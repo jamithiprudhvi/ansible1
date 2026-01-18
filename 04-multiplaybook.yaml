@@ -1,6 +1,6 @@
 - name: multi playbook
-  hosts: localhost
-  connection: local
+  hosts: frontend
+  become: yes
   tasks:
     - name: print the msg
       ansible.builtin.debug:
