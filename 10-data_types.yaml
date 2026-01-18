@@ -1,4 +1,4 @@
-- name: print vars
+- name: print the variables of different data types
   hosts: frontend
   become: yes
   vars:
