@@ -1,4 +1,4 @@
-- name: vars
+- name: print vars
   hosts: frontend
   become: yes
   vars:
