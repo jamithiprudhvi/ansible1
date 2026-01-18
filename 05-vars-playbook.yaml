@@ -7,4 +7,4 @@
   tasks:
    - name: print the message
      ansible.builtin.debug:
-      msg: "welcomr to {{COURSE}} course which is of {{DURATION}} duration   
+      msg: "welcomr to {{COURSE}} course which is of {{DURATION}} duration" 
