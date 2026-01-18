@@ -1,0 +1,9 @@
+- name: print variables from files
+  hosts: frontend
+  become: yes
+  vars_files:
+   - course.yaml
+  tasks:
+   - name: print the variables
+     ansible.builtin.debug:
+      msg: "welcome to {{COURSE}} course which is of {{DURATION}} duration and the {{TRAINER}} is trainer"
