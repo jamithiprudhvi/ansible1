@@ -1,0 +1,23 @@
+- name: vars
+  hosts: frontend
+  become: yes
+  vars:
+    COURSE: DevSecOps
+    DURATION: 12 weeks
+    TRAINER: siva
+    IS_LIVE: true
+    STUDENTS: 25
+  TOOLS:
+    - docker
+    - kubernetes
+    - ansible
+  CONCEPTS:
+    CICD: JENKINS
+    VCS: GIT
+    IAAC: Terraform
+    CONAINERS: Docker
+    ORCHESTRATION: Kubernetes
+  tasks:
+    - name: print string variable
+      ansible.builtin.debug:
+        msg: "Welcome to {{ COURSE }} course which is of {{ DURATION }} duration and the {{ TRAINER }} is trainer and course is live: {{ IS_LIVE }}, we are usingf TOOLS: {{ TOOLS }}, and concepts: {{ CONCEPTS }}"      
