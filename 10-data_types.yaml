@@ -7,16 +7,16 @@
     TRAINER: siva
     IS_LIVE: true
     STUDENTS: 25
-  TOOLS:
-    - docker
-    - kubernetes
-    - ansible
-  CONCEPTS:
-    CICD: JENKINS
-    VCS: GIT
-    IAAC: Terraform
-    CONAINERS: Docker
-    ORCHESTRATION: Kubernetes
+    TOOLS:
+      - docker
+      - kubernetes
+      - ansible
+    CONCEPTS:
+      CICD: JENKINS
+      VCS: GIT
+      IAAC: Terraform
+      CONAINERS: Docker
+      ORCHESTRATION: Kubernetes
   tasks:
     - name: print string variable
       ansible.builtin.debug:
