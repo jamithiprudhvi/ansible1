@@ -1,0 +1,19 @@
+- name: install and uninstall packages using loops
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: install and uninstall packages
+      ansible.builtin.oackages:
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
+      loop:
+        - { name: git, state: absent }
+        - { name: wget, state: absent }
+        - { name: curl, state: absent }
+        - { name: vim, state: absent }
+        - { name: tree, state: absent }
+        - { name: unzip, state: absent }
+        - { name: net-tools, state: absent }
+        - { name: nginx, state: absent }
+        - { name: mysql-server, state: present }
+        - { name: postgresql, state: present }  
