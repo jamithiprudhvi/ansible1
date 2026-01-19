@@ -1,0 +1,17 @@
+- name: loops
+  hosts: frontend
+  become: yes
+  tasks: 
+    - name: print the message with loop
+      ansible.builtin.debug:
+        msg: hello {{ item }}
+
+      loop:
+        - prudhvi
+        - siva
+        - hanuman
+        - rama
+        - krishna
+        - laxmana
+        - sita
+        - radha
