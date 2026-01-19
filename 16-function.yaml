@@ -1,0 +1,7 @@
+- name: functions
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: using functions in playbook
+      ansible.builtin.debug:
+        msg: hello "{{ person | default('prudhvi') }}"
