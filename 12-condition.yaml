@@ -13,3 +13,13 @@
         name: nginx
         state: present
       when: ansible_family == "Debian"  
+
+    - name: start nginx server
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: print the variables
+      ansible.builtin.debug:
+       msg: "iam learning {{ COURSE }} course which is of {{ DURATION }} duration and the {{ TRAINER }} is trainer"
