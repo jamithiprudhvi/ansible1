@@ -1,0 +1,22 @@
+- name: install packages using loop
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: installing multiple packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - nginx
+        - git 
+        - wget
+        - curl
+        - vim
+        - tree
+        - unzip
+        - net-tools
+    - name: start nginx server
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true    
